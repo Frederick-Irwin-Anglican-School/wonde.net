@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
-using System.Web.Script.Serialization;
 using System.Web;
 
 
@@ -21,11 +21,16 @@ namespace Wonde.Helpers
         /// <returns>Json data decoded as Key/Value pair representation of Dictionary object</returns>
         internal static Dictionary<string, object> getJsonAsDictionary(string jsonString)
         {
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-            ser.MaxJsonLength = Int32.MaxValue;
             if (jsonString.Trim().Length == 0)
                 return null;
-            return ser.Deserialize<Dictionary<string, object>>(jsonString);
+            try
+            {
+                return JsonSerializer.Deserialize<Dictionary<string, object>>(jsonString);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         /// <summary>
@@ -35,12 +40,10 @@ namespace Wonde.Helpers
         /// <returns>Json formated string</returns>
         internal static string formatObjectAsJson(object arrayObj)
         {
-            JavaScriptSerializer ser = new JavaScriptSerializer();
-            ser.MaxJsonLength = Int32.MaxValue;
-            if (arrayObj == null)
+            if (arrayObj is null)
                 return "{}";
 
-            return ser.Serialize(arrayObj);
+            return JsonSerializer.Serialize(arrayObj);
         }
 
         internal static string buildHttpQueryString(Dictionary<string, string> data, string delimeter = "&")
