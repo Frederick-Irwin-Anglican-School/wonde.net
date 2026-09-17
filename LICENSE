@@ -1,0 +1,280 @@
+# Extended Organisation Internal Use License (EOIUL) v1.2
+
+## 📚 Table of Contents
+
+- [📌 Plain English Summary (Non-Legal)](#-plain-english-summary-non-legal)
+  - [✅ What you can do](#-what-you-can-do)
+  - [❌ What you cannot do](#-what-you-cannot-do)
+  - [⚠️ Important boundaries](#️-important-boundaries)
+  - [🧾 Ownership](#-ownership)
+  - [🔒 In short](#-in-short)
+
+- [🔐 Full License Terms](#-full-license-terms)
+  - [1. Ownership](#1-ownership)
+  - [2. Grant of Use](#2-grant-of-use)
+  - [3. Source Code Access and Sharing](#3-source-code-access-and-sharing)
+    - [Permitted Limited Sharing](#permitted-limited-sharing)
+    - [Anti-Reconstruction Clause](#anti-reconstruction-clause)
+    - [Clarification](#clarification)
+  - [4. Restrictions](#4-restrictions)
+  - [5. Contributions](#5-contributions)
+  - [6. Distribution of Binaries](#6-distribution-of-binaries)
+  - [7. Access Control and Governance](#7-access-control-and-governance)
+  - [8. Confidentiality](#8-confidentiality)
+  - [9. Termination](#9-termination)
+  - [10. Disclaimer](#10-disclaimer)
+  - [11. Governing Law](#11-governing-law)
+  - [12. Author Retained Rights](#12-author-retained-rights)
+    - [Conditions](#conditions)
+  - [13. Third-Party Contributions](#13-third-party-contributions)
+    - [Submission](#submission)
+    - [Assignment](#assignment)
+    - [Contributor Rights](#contributor-rights)
+    - [Restrictions](#restrictions)
+
+---
+
+## 📌 Plain English Summary (Non-Legal)
+
+> [!WARNING]
+> This summary is for convenience only. The full license terms below are legally binding.
+
+### ✅ What you _can_ do
+
+- Use the software for **internal organisational purposes**
+- View the source code **if you’ve been explicitly granted access**
+- Make changes for **internal use only**
+- Submit improvements via **pull requests** (if you have access)
+- Share **small code snippets** for discussion or troubleshooting
+
+### ❌ What you _cannot_ do
+
+- Share the **full codebase**, or any substantial part of it
+- Distribute **modified versions** of the software
+- Host code outside **approved systems**
+- Give access to unapproved users
+- Use the software outside the organisation
+- Offer the software to external parties
+
+### ⚠️ Important boundaries
+
+- Organisation membership ≠ access (approval required)
+- Snippets are OK, but **not enough to reconstruct the system**
+- The code is **confidential and must be protected**
+
+### 🧾 Ownership
+
+- Created by **Jason Moore**
+- Jointly held with **Frederick Irwin Anglican School/AngliSchools**
+
+### 🔒 In short
+
+> [!NOTE]
+> Internal use only. No redistribution. Access is controlled. Contributions go through PRs.
+
+---
+
+## 🔐 Full License Terms
+
+### 1. Ownership
+
+This software, including all source code, binaries, documentation, and associated materials (the "Software"), is jointly held as follows:
+
+- © **Jason Moore** (the "Author"), who retains original authorship and ongoing intellectual property rights
+- **Frederick Irwin Anglican School/AngliSchools** (the "Organisation"), which retains ownership, control, and usage rights within its operational context
+
+Ownership of the Software is **shared in tandem** between the Author and the Organisation, subject to the terms of this License.
+
+All rights not expressly granted are reserved.
+
+### 2. Grant of Use
+
+The Organisation grants **authorized users** a limited, non-transferable, non-exclusive license to:
+
+- Use the Software for internal purposes
+- Access source code **only if explicitly approved**
+- Modify the Software strictly for internal use
+
+"Authorized users" are individuals explicitly granted access by the Author or Organisation.
+
+### 3. Source Code Access and Sharing
+
+Source code access is **restricted**.
+
+You may:
+
+- Access code only with explicit permission
+- Use it within approved systems
+
+You must NOT:
+
+- Share the Software in whole or substantial part
+- Host it outside approved systems
+- Circumvent access controls
+
+#### Permitted Limited Sharing
+
+You may share **small snippets** if:
+
+- They are non-substantial
+- Used for discussion, review, or troubleshooting
+- They cannot reconstruct the Software
+- They do not expose sensitive logic
+
+> [!IMPORTANT]
+> Sharing functional modules or reconstructable portions is prohibited.
+
+#### Anti-Reconstruction Clause
+
+> Repeated or systematic sharing of snippets that collectively form a substantial portion is strictly prohibited.
+
+#### Clarification
+
+> [!IMPORTANT]
+> Organisation membership does not grant access.
+
+### 4. Restrictions
+
+You may NOT:
+
+- Distribute the Software (modified or not)
+- Share modified versions
+- Provide access outside approved systems
+- Use it externally
+- Offer it as a service
+- Create externally distributed derivatives
+
+> [!IMPORTANT]
+> Modifications are strictly internal-use only.
+
+### 5. Contributions
+
+Authorized users may contribute via approved workflows (e.g., pull requests).
+
+By contributing:
+
+- Your contribution becomes part of the Software
+- Rights are assigned to the Author and/or Organisation
+- Contributions may be accepted, modified, or rejected
+
+### 6. Distribution of Binaries
+
+Only the Author and/or Organisation may:
+
+- Build binaries
+- Distribute artifacts
+
+### 7. Access Control and Governance
+
+The Organisation and/or Author control:
+
+- Access permissions
+- Approval and revocation
+- Repository governance
+
+Access grants **no additional rights** beyond this license.
+
+### 8. Confidentiality
+
+The Software is **confidential and proprietary**.
+
+You must:
+
+- Protect it from unauthorized disclosure
+- Use it only as permitted
+
+You must NOT:
+
+- Disclose it in whole or substantial part
+- Compromise its confidentiality
+
+This obligation continues after termination.
+
+### 9. Termination
+
+This License terminates automatically on violation.
+
+You must:
+
+- Stop using the Software
+- Delete all copies (including local clones)
+
+### 10. Disclaimer
+
+The Software is provided **"as is"**, without warranty of any kind.
+
+### 11. Governing Law
+
+This License is governed by the laws of **Western Australia, Australia**.
+
+### 12. Author Retained Rights
+
+**Subject to any separate written agreement between the Author and the Organisation**, the Author retains the right to:
+
+- Store copies outside Organisation systems
+- Maintain backups
+- Retain copies after leaving
+- Continue independent development
+
+Upon leaving:
+
+- The Organisation retains full rights to its version
+- The Author may:
+  - Continue development
+  - Modify and evolve the code
+  - Distribute and commercialise their version
+
+#### Conditions
+
+The Author must:
+
+- Remove all Organisation-specific confidential information
+- Not disclose internal logic or trade secrets
+- Not imply affiliation
+- Comply with applicable agreements
+
+> The Organisation keeps its version; the Author is free to evolve theirs independently.
+
+### 13. Third-Party Contributions
+
+Contributions are allowed only via approved workflows.
+
+#### Submission
+
+Contributors confirm:
+
+- They have the right to contribute
+- Contributions do not infringe third-party rights
+
+#### Assignment
+
+All contributions:
+
+- Become part of the Software
+- Are assigned to the Author and/or Organisation
+- May be used at their discretion
+
+#### Contributor Rights
+
+Contributors:
+
+- Receive no ownership rights
+- May not distribute their contributions independently
+
+#### Restrictions
+
+Contributors must NOT:
+
+- Maintain external forks
+- Distribute contributions
+- Reconstruct the Software externally
+
+#### Enforcement
+
+> [!IMPORTANT]
+> Contributions may be rejected or removed at any time for legal, security, or policy reasons.
+
+#### Author Protection
+
+> [!IMPORTANT]
+> Contributions do not limit the Author’s independent rights under Clause 12.
