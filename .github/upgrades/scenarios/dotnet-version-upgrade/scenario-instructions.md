@@ -19,3 +19,8 @@ Upgrade Wonde.NET from .NET Framework 4.8 to .NET 10.0 (LTS)
 - **Breaking API Changes**: Manual Review
 - **Configuration Migration**: System.Configuration.ConfigurationManager bridge
 - **System.Web Compatibility**: System.Web.Adapters evaluation
+
+## Build Tool Decisions
+- **Wonde.NET.csproj**: `dotnet build` (SDK-style, net48→net10.0, no special requirements)
+- **TestWondeConsole.csproj**: `dotnet build` (SDK-style, net48→net10.0, no special requirements)
+- **Tests.csproj**: `dotnet build` (SDK-style, net48→net10.0, MSTest via NuGet)
