@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Text.Json;
 using System.Threading.Tasks;
 using Wonde.EndPoints;
 using Wonde.Helpers;
@@ -60,9 +61,29 @@ namespace Wonde
         public ResultIterator(Dictionary<string, object> resp, string token) : base(token, "")
         {
             if(resp.Keys.Contains("data"))
-                ArrayData = (IEnumerable)resp["data"];
+            {
+                var dataElement = resp["data"];
+                if (dataElement is JsonElement jsonElement && jsonElement.ValueKind == JsonValueKind.Array)
+                {
+                    ArrayData = jsonElement.EnumerateArray().Cast<object>().ToList();
+                }
+                else if (dataElement is IEnumerable enumerable)
+                {
+                    ArrayData = enumerable;
+                }
+            }
             if(resp.Keys.Contains("meta"))
-                MetaData = (Dictionary<string, object>)resp["meta"];
+            {
+                var metaElement = resp["meta"];
+                if (metaElement is JsonElement jsonMetaElement)
+                {
+                    MetaData = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonMetaElement.GetRawText());
+                }
+                else if (metaElement is Dictionary<string, object> metaDict)
+                {
+                    MetaData = metaDict;
+                }
+            }
             this.Token = token;
         }
         
@@ -169,8 +190,28 @@ namespace Wonde
             if (res == null)
                 return false;
 
-            MetaData = (Dictionary<string, object>)res["meta"];
-            ArrayData = (ArrayList)res["data"];
+            // Handle meta data
+            var metaElement = res["meta"];
+            if (metaElement is JsonElement jsonMetaElement)
+            {
+                MetaData = JsonSerializer.Deserialize<Dictionary<string, object>>(jsonMetaElement.GetRawText());
+            }
+            else if (metaElement is Dictionary<string, object> metaDict)
+            {
+                MetaData = metaDict;
+            }
+
+            // Handle data
+            var dataElement = res["data"];
+            if (dataElement is JsonElement jsonElement && jsonElement.ValueKind == JsonValueKind.Array)
+            {
+                ArrayData = jsonElement.EnumerateArray().Cast<object>().ToList();
+            }
+            else if (dataElement is IEnumerable enumerable)
+            {
+                ArrayData = enumerable;
+            }
+
             Reset();
             arrEnum = ArrayData.GetEnumerator();
             return true;
